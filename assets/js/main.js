@@ -7,14 +7,23 @@ console.log('Sample JavaScript #1 HW #13');
  */
 
 // имя переменной: myNum, значение: 10
-
+var myNum = 10;
+console.log(myNum);
 // имя переменной: myStr, значение: 'строка'
-
+var myStr = 'строка';
+console.log(myStr);
 // имя переменной: myBool, значение: true
-
+var myBool = true;
+console.log(myBool);
 // имя переменной: myArr, значения: 1, 2, 3, 4, 5
-
+var myArr = [1, 2, 3, 4, 5];
+console.log(myArr);
 // имя переменной myObj, значения: first: 'First Name', last: 'Last Name'
+var myObj = {
+  first: 'First Name',
+  last: 'Last Name'
+}
+console.log(myObj);
 
 /*
  * #2
@@ -24,7 +33,8 @@ console.log('Sample JavaScript #1 HW #13');
  * Результат сохраните в переменную decimal2.
  */
 
-// decimal2
+
+var decimal2 = myNum.toFixed(2);
 
 /*
  * #3
@@ -34,7 +44,14 @@ console.log('Sample JavaScript #1 HW #13');
  * Поэкспериментируйте с результатами, выводя их в консоль.
  */
 
-// i
+var i = 5;
+
+console.log(i++);
+console.log(++i);
+console.log(i);
+console.log(i--);
+console.log(--i);
+console.log(i);
 
 /*
  * #4
@@ -45,17 +62,23 @@ console.log('Sample JavaScript #1 HW #13');
  * В вычислениях можно использовать объявленную ранее переменную myNum и/или числа.
  */
 
-// myTest
+var myTest = 20;
 
-// +=
+myTest += myNum;
+console.log(myTest);
 
-// –=
+myTest -= 5;
+console.log(myTest);
 
-// *=
+myTest *= 2;
+console.log(myTest);
 
-// /=
+myTest /= 5;
+console.log(myTest);
 
-// %=
+myTest %= 3;
+console.log(myTest);
+
 
 /*
  * #5
@@ -64,12 +87,17 @@ console.log('Sample JavaScript #1 HW #13');
  */
 
 // константа Pi → myPi
-
+var myPi = Math.PI;
+console.log(Math.PI);
 // округленное значение числа 89.279 → myRound
-
+var myRound = Math.round(89.279);
+console.log(Math.round(89.279));
 // случайное число между 0..10 → myRandom
-
+var myRandom = Math.random(0)*10;
+console.log(Math.random(0)*10);
 // 3 в 5 степени → myPow
+ var myPow = Math.pow(3, 5);
+console.log(Math.pow(3, 5));
 
 /*
  * #6
@@ -78,8 +106,10 @@ console.log('Sample JavaScript #1 HW #13');
  * Присвойте ключу str строку текста "Мама мыла раму, рама мыла маму", ключу length установите длину этой строки.
  */
 
+var strObj = str;
+  str = 'Мама мыла раму, рама мыла маму';
+console.log(strObj.length);
 // Мама мыла раму, рама мыла маму
-
 // strObj
 
 /*
