@@ -93,10 +93,10 @@ console.log(Math.PI);
 var myRound = Math.round(89.279);
 console.log(Math.round(89.279));
 // случайное число между 0..10 → myRandom
-var myRandom = Math.random(0)*10;
-console.log(Math.random(0)*10);
+var myRandom = Math.random(0) * 10;
+console.log(Math.random(0) * 10);
 // 3 в 5 степени → myPow
- var myPow = Math.pow(3, 5);
+var myPow = Math.pow(3, 5);
 console.log(Math.pow(3, 5));
 
 /*
@@ -106,9 +106,9 @@ console.log(Math.pow(3, 5));
  * Присвойте ключу str строку текста "Мама мыла раму, рама мыла маму", ключу length установите длину этой строки.
  */
 
-var strObj = str;
-  str = 'Мама мыла раму, рама мыла маму';
-console.log(strObj.length);
+var strObj = {str: 'Мама мыла раму, рама мыла маму'};
+strObj.length = strObj.str.length;
+console.log(strObj, 'Мама мыла раму, рама мыла маму'.length);
 // Мама мыла раму, рама мыла маму
 // strObj
 
@@ -119,8 +119,9 @@ console.log(strObj.length);
  * результат сохраните в переменную isRamaPos и выведите ее в консоль.
  */
 
+var isRamaPos = strObj.str.indexOf ('рама');
 // isRamaPos
-
+console.log(isRamaPos);
 /*
  * #8
  *
@@ -129,11 +130,17 @@ console.log(strObj.length);
  * Исходная строка: 'Мама мыла раму, рама мыла маму'
  *       Результат: 'Мама моет раму, Рама держит маму'
  */
-
 // strReplace
-
+var strReplace = 'Мама мыла раму, рама мыла маму';
+strReplace = strReplace.replace('мыла', 'моет')
+strReplace = strReplace.replace('рама', 'Рама');
+strReplace = strReplace.replace('мыла', 'держит');
+console.log(strReplace);
 /*
  * #9
  *
  * Преобразуйте любую строку в верхний, затем в нижний регистры, результат отобразите в консоли.
  */
+var string = 'Мама мыла раму, рама мыла маму';
+console.log(string.toUpperCase());
+console.log(string.toLowerCase());
